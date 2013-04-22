@@ -1,6 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+  	<div class="span12">
+	  <p id="notice"><%= notice %></p>
 
-<%= image_tag @image.image.url(:medium) %>
+	  <%= image_tag @image.image.url(:medium) %>
 
-<%= link_to 'Edit', edit_image_path(@image) %> |
-<%= link_to 'Back', image_bank_images_path(@image.image_bank_id) %>
+	  <%= link_to 'Edit', edit_image_path(@image), :class => "btn" %> |
+	  <%= link_to 'Back', image_bank_images_path(@image.image_bank_id), :class => "btn" %>
+	</div><!-- span12 -->
+  </div><!-- row -->
+</div><!-- container -->

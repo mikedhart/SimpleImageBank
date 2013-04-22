@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+    	<p id="notice"><%= notice %></p>
+		<p>
+		  <b>User:</b>
+		  <%= @image_bank.user_id %>
+		</p>
+
+		<p>
+		  <b>Image bank name:</b>
+		  <%= @image_bank.image_bank_name %>
+		</p>
+
+		<p>
+		  <b>Image bank description:</b>
+		  <%= @image_bank.image_bank_description %>
+		</p>
+    </div><!-- span12 -->
+  </div><!-- row -->
+  <div class="row">
+    <div class="span12">
+		<%= render :partial => "simple_image_bank/images/images", :locals => {:images => @image_bank.images} %>
+	</div><!-- span12 -->
+  </div><!-- row -->
+</div><!-- container -->
+
+<%= link_to 'Edit', edit_image_bank_path(@image_bank) %> |
+<%= link_to 'Back', image_banks_path %>

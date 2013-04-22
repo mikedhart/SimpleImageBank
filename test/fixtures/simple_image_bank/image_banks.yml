@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  image_bank_name: MyString
+  image_bank_description: MyText
+
+two:
+  user_id: 1
+  image_bank_name: MyString
+  image_bank_description: MyText

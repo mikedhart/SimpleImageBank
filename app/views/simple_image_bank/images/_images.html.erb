@@ -1,0 +1,12 @@
+<div class="row">
+  <% images.each do |image| %>
+    <div class="span4">
+      <%= image_tag image.image.url(:thumb) %>
+      <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div><!-- span4 -->
+  <% end %>
+
+  <br />
+
+  <%= link_to 'New Image', new_image_bank_image_path(params[:image_bank_id] || params[:id]) %>
+</div><!-- row -->

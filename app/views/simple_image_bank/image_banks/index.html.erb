@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h1>Listing image_banks</h1>
+    </div><!-- span12 -->
+  </div><!-- row -->
+  <div class="row">
+    <div class="span12">
+      <table>
+        <tr>
+          <th>Image bank name</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+
+      <% @image_banks.each do |image_bank| %>
+        <tr>
+          <td><%= image_bank.image_bank_name %></td>
+          <td>
+            <div class="btn-group">
+              <%= link_to 'Show', image_bank, :class => "btn" %>
+              <%= link_to 'Edit', edit_image_bank_path(image_bank), :class => "btn" %>
+              <%= link_to 'Destroy', image_bank, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+            </div><!-- btn-group -->
+          </td>
+        </tr>
+      <% end %>
+      </table>
+
+      <%= link_to 'New Image bank', new_image_bank_path, :class => "btn btn-success" %>
+    </div><!-- span12 -->
+  </div><!-- row -->
+</div><!-- container -->
+
+
+

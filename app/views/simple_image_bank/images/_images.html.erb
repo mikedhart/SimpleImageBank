@@ -1,7 +1,7 @@
 <div class="row">
   <% images.each do |image| %>
     <div class="span4">
-	  <a href="<%= image_path(image) %>">
+	     <a href="<%= image.image.url %>">
       	<%= image_tag image.image.url(:thumb), :class => "simple_image_bank_list" %>
   	  </a>
       <br />

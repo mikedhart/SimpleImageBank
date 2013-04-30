@@ -3,7 +3,7 @@ PATH
   specs:
     simple_image_bank (0.0.1)
       paperclip (~> 3.4)
-      rails (~> 3.2.13)
+      rails (~> 3.2)
 
 GEM
   remote: http://rubygems.org/

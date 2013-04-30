@@ -5,8 +5,14 @@
 
 	  <%= image_tag @image.image.url(:medium) %>
 
-	  <%= link_to 'Edit', edit_image_path(@image), :class => "btn" %> |
-	  <%= link_to 'Back', image_bank_images_path(@image.image_bank_id), :class => "btn" %>
 	</div><!-- span12 -->
   </div><!-- row -->
+  <div class="row">
+  	<div class="span12">
+  	  <div class="btn-group">
+		  <%= link_to 'Edit', edit_image_path(@image), :class => "btn" %>
+	  	  <%= link_to 'Back', image_bank_images_path(@image.image_bank_id), :class => "btn" %>
+  	  </div><!-- btn-group -->
+  	</div>
+  </div>
 </div><!-- container -->

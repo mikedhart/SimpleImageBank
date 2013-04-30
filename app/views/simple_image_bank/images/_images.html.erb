@@ -2,14 +2,16 @@
   <% images.each do |image| %>
     <div class="span4">
 	  <a href="<%= image_path(image) %>">
-      	<%= image_tag image.image.url(:thumb) %>
+      	<%= image_tag image.image.url(:thumb), :class => "simple_image_bank_list" %>
   	  </a>
       <br />
       <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
     </div><!-- span4 -->
   <% end %>
-
-  <br />
-
-  <%= link_to 'New Image', new_image_bank_image_path(params[:image_bank_id] || params[:id]), :class => "btn btn-success" %>
 </div><!-- row -->
+
+<div class="row">
+  <div class="span12">
+    <%= link_to 'New Image', new_image_bank_image_path(params[:image_bank_id] || params[:id]), :class => "btn btn-success" %>
+  </div>
+</div>

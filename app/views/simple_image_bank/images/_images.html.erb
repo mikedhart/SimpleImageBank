@@ -2,7 +2,7 @@
   <% images.each do |image| %>
     <div class="span4">
 	     <a href="<%= image.image.url %>">
-      	<%= image_tag image.image.url(:thumb), :class => "simple_image_bank_list" %>
+      	<%= image_tag image.image.url(:medium), :class => "simple_image_bank_list" %>
   	  </a>
       <br />
       <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>

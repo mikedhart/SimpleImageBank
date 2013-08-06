@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806072121) do
+ActiveRecord::Schema.define(:version => 20130806072900) do
 
   create_table "simple_image_bank_image_banks", :force => true do |t|
     t.string   "image_bank_name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20130806072121) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "image_bank_id"
+    t.boolean  "share"
   end
 
 end

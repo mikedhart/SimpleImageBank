@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130422072004) do
+ActiveRecord::Schema.define(:version => 20130806072121) do
 
   create_table "simple_image_bank_image_banks", :force => true do |t|
-    t.integer  "user_id"
     t.string   "image_bank_name"
     t.text     "image_bank_description"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.integer  "foreign_id"
   end
 
   create_table "simple_image_bank_image_types", :force => true do |t|
